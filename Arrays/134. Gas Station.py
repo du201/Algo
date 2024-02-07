@@ -2,6 +2,9 @@
 
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        if sum(gas) < sum(cost):
+            return -1
+            
         init_remain_gas_arr = []
 
         for i in range(len(gas)):
