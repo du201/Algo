@@ -1,0 +1,2 @@
+For one category of hashmap questions, using brute force requires O(n^2). By using hashmap, we can first go through each element in O(n), and we use the calculated result of each element as keys and store elements that have the same key together. This type of question includes: 
+2342. Max Sum of a Pair With Equal Sum of Digits
