@@ -1,0 +1,2 @@
+1. If two trees have the same preorder, inorder, or postorder iterations, those two trees can still be different
+2. All types of DFS can be implemented iteratively, but postorder and inorder are more complicated to implement than preorder (which is very easy)
