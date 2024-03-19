@@ -33,3 +33,42 @@ class Solution:
         help(root, root.val, root.val)
 
         return self.max_diff
+
+5. In Python, an inner function can use the variable defined in an outer function. But if you want to change the value of an outer function's variable, it's harder and you need special keyword.
+i.e.
+def myfunc():
+  x = 300
+  def myinnerfunc():
+  	x = 200
+  	print(x)
+  myinnerfunc()
+  print(x)
+
+myfunc()
+
+This would print 200, 300
+
+def myfunc():
+  x = 300
+  def myinnerfunc():
+  	print(x)
+  myinnerfunc()
+
+myfunc()
+
+This would print 300.
+
+You need the keyword nonlocal:
+
+i.e. def myfunc():
+  x = 300
+  def myinnerfunc():
+  	nonlocal x
+  	x = 200
+  	print(x)
+  myinnerfunc()
+  print(x)
+
+myfunc()
+
+This would print 200, 200
